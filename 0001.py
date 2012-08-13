@@ -1,5 +1,10 @@
 import sys
 
-for i in range(1, 10):
-  for j in range(1, 10):
-    sys.stdout.write("%dx%d=%d\n" % (i , j , i*j))
+a = []
+for line in sys.stdin:
+  a.append(int(line))
+
+a.sort(lambda x, y: y - x)
+
+for i in range(3):
+  print a[i]
